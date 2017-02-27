@@ -1,0 +1,15 @@
+{
+    "name": "aranjedeath/weather-by-text",
+    "description": "get the weather via text message",
+    "type": "project",
+    "authors": [
+        {
+            "name": "Jacob Taylor",
+            "email": "orangewinds@gmail.com"
+        }
+    ],
+    "require": {
+        "paragonie/easydb": "^2.3",
+        "twilio/sdk": "^5.5"
+    }
+}
