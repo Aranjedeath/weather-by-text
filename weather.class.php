@@ -46,6 +46,10 @@ class WEATHER
             $pdoQuery->bindParam(':phone', $phone);
             $pdoQuery->execute();
     }
+    public function makeActive($phone)
+    {
+        return $this->database->run('UPDATE `users` SET active = 1 WHERE phone = ?', $phone);
+    }
 
 }
 

@@ -40,6 +40,7 @@ switch($userCount) {
 			if (is_numeric($body))
 			{
 				$weather->addZip($twilio_client_number, $body);
+				$weather->makeActive($twilio_client_number);
 				$response->sms('Weather by text now active for '.$body);
 			}
 		}
