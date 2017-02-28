@@ -4,20 +4,20 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "7aa0035cd48f6a8be26f4465f16228bc",
+    "content-hash": "c577ce83ab1062745007fa1d8f8c26dd",
     "packages": [
         {
             "name": "paragonie/easydb",
-            "version": "v2.3.0",
+            "version": "v1.3.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/paragonie/easydb.git",
-                "reference": "0a04e8d0efbd303df7280e70bffb3368e1ead2c3"
+                "reference": "b5a6c01764f41f4ceba7ae5e699d985de626bdec"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/paragonie/easydb/zipball/0a04e8d0efbd303df7280e70bffb3368e1ead2c3",
-                "reference": "0a04e8d0efbd303df7280e70bffb3368e1ead2c3",
+                "url": "https://api.github.com/repos/paragonie/easydb/zipball/b5a6c01764f41f4ceba7ae5e699d985de626bdec",
+                "reference": "b5a6c01764f41f4ceba7ae5e699d985de626bdec",
                 "shasum": ""
             },
             "require": {
@@ -58,7 +58,7 @@
                 "security",
                 "sql"
             ],
-            "time": "2017-01-12T15:28:23+00:00"
+            "time": "2017-01-12T15:29:21+00:00"
         },
         {
             "name": "twilio/sdk",
