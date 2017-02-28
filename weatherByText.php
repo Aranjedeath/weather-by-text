@@ -32,6 +32,7 @@ switch($userCount) {
 	case 0:
 		$weather->makeNewUser($twilio_client_number);
 		$response->sms('What zip code do you want to receive weather for?');
+		break;
 	case 1:
 		$user = $weather->getUserByPhone($twilio_client_number);
 		if ($user['active'] == 1) {
@@ -44,8 +45,11 @@ switch($userCount) {
 				$response->sms('Weather by text now active for '.$body);
 			}
 		}
+		break;
 	default:
-		// error error problem problem
+		echo "error error problem problem\n";
+		//echo $userCount;
+		break;
 }
 //}
 
