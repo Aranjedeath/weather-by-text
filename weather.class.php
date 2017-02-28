@@ -22,33 +22,25 @@ class WEATHER
     }
     public function makeNewUser($phone)
     {
-        $columns = [
-            'phone',
-            'active'
-        ];
-        $data_array = [
-            $phone,
-            '0'
-        ];
-        $insert = $this->$database->buildInsertQuery('users', $columns);
-        $this->$database->q(
-            $insert,
-            $data_array,
-            \PDO::FETCH_BOTH,
-            true
-        );
+        $this->database->insert('users', [
+            'phone' => $phone,
+        ]);
     }
     public function addZip($phone, $zip)
     {
-        $pdo = $this->database->getPdo();
-        $pdoQuery = $pdo->prepare('UPDATE `users` SET zip = :zip WHERE phone = :phone');
-            $pdoQuery->bindParam(':zip', $zip);
-            $pdoQuery->bindParam(':phone', $phone);
-            $pdoQuery->execute();
+        $this->database->update('users', [
+            'zip' => $zip
+        ], [
+            'phone' => $phone
+        ]);
     }
     public function makeActive($phone)
     {
-        return $this->database->run('UPDATE `users` SET active = 1 WHERE phone = ?', $phone);
+        $this->database->update('users', [
+            'active' => 1
+        ], [
+            'phone' => $phone
+        ]);
     }
 
 }
